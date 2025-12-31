@@ -1,12 +1,11 @@
 from transformers import pipeline
 
-classifier = pipeline("sentiment-analysis")
-result = classifier("I've been waiting for a HuggingFace course my whole life.")
+transcriber = pipeline(
+    task="automatic-speech-recognition", model="openai/whisper-base.en"
+)
+result = transcriber(
+    "/home/et/Downloads/mlk.flac",
+    return_timestamps=False,
+)
 
 print(result)
-
-result_2 = classifier([
-    "I've been waiting for a HuggingFace course my whole life.",
-    "I hate this so much!"
-])
-print(result_2)
