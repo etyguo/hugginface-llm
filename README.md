@@ -27,7 +27,7 @@ This project uses `uv` for dependency management.
 
 1.  **Build the image:**
     ```bash
-    docker build -t llm-course .
+    (sudo) docker build -t llm-course .
     ```
 
 2.  **Run with NVIDIA GPU:**
