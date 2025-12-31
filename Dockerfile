@@ -32,4 +32,4 @@ RUN uv sync --frozen
 COPY . .
 
 # Default command (can be overridden)
-CMD ["uv", "run", "chapter1_3.py"]
+CMD ["uv", "run", "chapter1.py"]
